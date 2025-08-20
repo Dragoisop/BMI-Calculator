@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="x-ua-compatible" content="ie=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Free Online BMI Calculator | Body Mass Index Health Calculator</title>
+  <meta name="description" content="Free online BMI calculator (Body Mass Index). Enter height and weight to calculate BMI and see your category: underweight, normal, overweight, or obese. Mobile-friendly, fast, and private." />
+  <meta name="keywords" content="BMI, body mass index, health calculator, BMI calculator, weight, height" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://example.com/" />
+
+  <!-- Open Graph for better sharing -->
+  <meta property="og:title" content="Free Online BMI Calculator" />
+  <meta property="og:description" content="Calculate your Body Mass Index (BMI) quickly and see your category. Includes chart and FAQs." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://example.com/" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Free Online BMI Calculator" />
+  <meta name="twitter:description" content="Fast, mobile-friendly BMI calculator with categories, chart, and FAQs." />
+  <!-- Favicon / Tab Icon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='36' height='36' viewBox='0 0 24 24' fill='none' stroke='%23098ccf' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Crect x='3' y='3' width='18' height='18' rx='3' ry='3'%3E%3C/rect%3E%3Cpath d='M3 9h18M9 21V9'%3E%3C/path%3E%3C/svg%3E" />
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <a class="skip-link" href="#content">Skip to content</a>
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand">
+        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='36' height='36' viewBox='0 0 24 24' fill='none' stroke='%23098ccf' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Crect x='3' y='3' width='18' height='18' rx='3' ry='3'%3E%3C/rect%3E%3Cpath d='M3 9h18M9 21V9'%3E%3C/path%3E%3C/svg%3E" alt="Site logo: minimalist square icon" width="36" height="36" />
+        <span class="brand-name">Health Tools</span>
+      </div>
+      <button class="mobile-nav-toggle" aria-controls="primary-navigation" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </button>
+      <nav class="main-nav" id="primary-navigation" aria-label="Primary">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="faq.html">FAQ</a>
+        <a href="privacy.html">Privacy &amp; Terms</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="content" class="container">
+    <h1>Free Online BMI Calculator</h1>
+    <p class="intro">Use this simple, fast, and mobile-friendly Body Mass Index calculator to estimate your BMI based on your height and weight.</p>
+
+    <!-- AdSense ad here: Top placement above calculator -->
+    <div class="ad ad-top" aria-label="Advertisement placeholder">
+      <!-- AdSense ad here -->
+    </div>
+
+    <section class="layout">
+      <section class="card calculator" aria-labelledby="calculator-title">
+        <h2 id="calculator-title">BMI Calculator</h2>
+
+        <form id="bmi-form" novalidate>
+          <fieldset class="unit-toggle">
+            <legend>Units</legend>
+            <label class="toggle">
+              <input type="radio" name="units" value="metric" checked />
+              <span>Metric (kg, cm)</span>
+            </label>
+            <label class="toggle">
+              <input type="radio" name="units" value="imperial" />
+              <span>Imperial (lb, ft/in)</span>
+            </label>
+          </fieldset>
+
+          <div class="inputs inputs-metric" data-unit="metric">
+            <label for="heightCm">Height (cm)</label>
+            <input id="heightCm" name="heightCm" type="number" inputmode="decimal" min="50" max="300" step="0.1" placeholder="170" required />
+
+            <label for="weightKg">Weight (kg)</label>
+            <input id="weightKg" name="weightKg" type="number" inputmode="decimal" min="10" max="400" step="0.1" placeholder="65" required />
+          </div>
+
+          <div class="inputs inputs-imperial hidden" data-unit="imperial">
+            <div class="grid-2">
+              <div>
+                <label for="heightFt">Height (feet)</label>
+                <input id="heightFt" name="heightFt" type="number" inputmode="numeric" min="1" max="8" step="1" placeholder="5" />
+              </div>
+              <div>
+                <label for="heightIn">Height (inches)</label>
+                <input id="heightIn" name="heightIn" type="number" inputmode="decimal" min="0" max="11.99" step="0.1" placeholder="7" />
+              </div>
+            </div>
+            <label for="weightLb">Weight (lb)</label>
+            <input id="weightLb" name="weightLb" type="number" inputmode="decimal" min="22" max="882" step="0.1" placeholder="143" />
+          </div>
+
+          <div class="actions">
+            <button type="submit" class="btn-primary">Calculate BMI</button>
+            <button type="reset" class="btn-ghost" id="reset-btn" aria-label="Reset form">Reset</button>
+          </div>
+
+          <p class="helper">BMI = weight (kg) / [height (m)]²</p>
+        </form>
+
+        <div class="result" aria-live="polite" aria-atomic="true">
+          <div class="result-value" id="bmi-value">—</div>
+          <div class="result-label" id="bmi-label">Enter your details to see results.</div>
+        </div>
+      </section>
+
+      <aside class="sidebar">
+        <!-- AdSense ad here: Sidebar placement -->
+        <div class="ad ad-sidebar" aria-label="Advertisement placeholder">
+          <!-- AdSense ad here -->
+        </div>
+
+        <section class="card" aria-labelledby="bmi-chart-title">
+          <h2 id="bmi-chart-title">BMI Category Chart</h2>
+          <table class="bmi-table" id="bmi-table">
+            <thead>
+              <tr>
+                <th scope="col">Category</th>
+                <th scope="col">BMI Range</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr data-range="under">
+                <td>Underweight</td>
+                <td>&lt; 18.5</td>
+              </tr>
+              <tr data-range="normal">
+                <td>Normal weight</td>
+                <td>18.5 – 24.9</td>
+              </tr>
+              <tr data-range="over">
+                <td>Overweight</td>
+                <td>25.0 – 29.9</td>
+              </tr>
+              <tr data-range="obese">
+                <td>Obese</td>
+                <td>≥ 30.0</td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+      </aside>
+    </section>
+
+    <!-- AdSense ad here: Below calculator/content -->
+    <div class="ad ad-bottom" aria-label="Advertisement placeholder">
+      <!-- AdSense ad here -->
+    </div>
+
+    
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <nav class="footer-nav" aria-label="Footer">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="faq.html">FAQ</a>
+        <a href="privacy.html">Privacy &amp; Terms</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <p>&copy; <span id="year"></span> Health Tools. All rights reserved.</p>
+      <!-- AdSense ad here: Footer placement -->
+      <div class="ad ad-footer" aria-label="Advertisement placeholder">
+        <!-- AdSense ad here -->
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
+
+
